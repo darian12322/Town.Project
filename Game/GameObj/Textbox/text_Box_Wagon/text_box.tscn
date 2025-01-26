@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkxsmj3yqmcq4"]
+
+[ext_resource type="Script" path="res://Game/GameObj/Textbox/script/text_box.gd" id="1_n86xe"]
+[ext_resource type="Texture2D" uid="uid://dhp3aypp5hdo6" path="res://Game/GameObj/Textbox/texture/Text_box.png" id="2_odqb7"]
+[ext_resource type="FontFile" uid="uid://ctc7lkyg38rgv" path="res://Game/GameObj/Textbox/Fonts/ARCADECLASSIC.TTF" id="3_4tpwr"]
+[ext_resource type="Texture2D" uid="uid://l7ct71ch7tik" path="res://Game/GameObj/Textbox/texture/Wagon_PP.png" id="4_a02x8"]
+[ext_resource type="PackedScene" uid="uid://byd6884678qd5" path="res://Game/AUDIO/voice.tscn" id="5_7y7st"]
+
+[sub_resource type="FontVariation" id="FontVariation_3oj1n"]
+base_font = ExtResource("3_4tpwr")
+
+[node name="TextBox" type="CanvasLayer"]
+script = ExtResource("1_n86xe")
+
+[node name="Text_Box" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 134.0
+offset_top = 481.0
+offset_right = 1074.0
+offset_bottom = 615.0
+texture = ExtResource("2_odqb7")
+
+[node name="MarginContainer" type="MarginContainer" parent="Text_Box"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 24.0
+offset_right = 897.0
+offset_bottom = 116.0
+
+[node name="Label" type="Label" parent="Text_Box/MarginContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Hi"
+autowrap_mode = 2
+
+[node name="End" type="Label" parent="Text_Box/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("FontVariation_3oj1n")
+text = "Click"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.04
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 19.0
+offset_top = 485.0
+offset_right = 157.0
+offset_bottom = 611.0
+texture = ExtResource("4_a02x8")
+
+[node name="Voice" parent="." instance=ExtResource("5_7y7st")]
+pitch_scale = 1.12
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

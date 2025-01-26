@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6fs00s4f2hct"]
+
+[ext_resource type="Texture2D" uid="uid://ghutw6acuqbr" path="res://Game/Scene/MainMenu/texture/sky1.png" id="1_05dee"]
+[ext_resource type="Script" path="res://Game/Scene/Settings/settings.gd" id="1_adwc5"]
+[ext_resource type="Texture2D" uid="uid://co2ribtcl3n2h" path="res://Game/GameObj/Buttons/Texture/Button.png" id="2_7h8h6"]
+[ext_resource type="Script" path="res://Game/Scene/Settings/h_slider.gd" id="4_qecqu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjnk4"]
+texture = ExtResource("2_7h8h6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4o1ed"]
+texture = ExtResource("2_7h8h6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1d6bd"]
+texture = ExtResource("2_7h8h6")
+
+[node name="Settings" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_adwc5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1527.0
+offset_bottom = 888.0
+texture = ExtResource("1_05dee")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 991.0
+offset_top = 538.0
+offset_right = 1135.0
+offset_bottom = 641.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_xjnk4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4o1ed")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1d6bd")
+text = "Back"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer"]
+offset_left = 39.0
+offset_top = 167.0
+offset_right = 335.0
+offset_bottom = 236.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_qecqu")
+bus_name = "Master"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 151.0
+offset_top = 164.0
+offset_right = 273.0
+offset_bottom = 187.0
+text = "Music
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 350.0
+offset_right = 401.0
+offset_bottom = 545.0
+text = "					                         	Controls:
+ESC-for pause"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

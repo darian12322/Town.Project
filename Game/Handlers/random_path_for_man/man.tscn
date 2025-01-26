@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgjs66ecljnl1"]
+
+[ext_resource type="Script" path="res://Game/Handlers/random_path_for_man/path_follow_2d.gd" id="1_lk6gj"]
+[ext_resource type="Texture2D" uid="uid://bvp3r1xedleoh" path="res://Game/Handlers/Man.png" id="2_pu4pc"]
+
+[sub_resource type="Curve2D" id="Curve2D_c2t7p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30.9744, 3.07692, 0, 0, 0, 0, 80.8889, 2.66667, 0, 0, 0, 0, 17.4359, 1.98291, 0, 0, 0, 0, 132.581, 3.35043, 0, 0, 0, 0, 142.427, 2.39316, 0, 0, 0, 0, 104.821, 1.57265, 0, 0, 0, 0, 94.0171, 2.39316, 0, 0, 0, 0, 17.5726, 2.52991)
+}
+point_count = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bduif"]
+atlas = ExtResource("2_pu4pc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf808"]
+atlas = ExtResource("2_pu4pc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35bsc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bduif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf808")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Man" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(51.5, 49.5)
+scale = Vector2(1.53838, 1.53838)
+curve = SubResource("Curve2D_c2t7p")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(30.9744, 3.07692)
+rotation = -0.00821899
+scale = Vector2(0.136752, 0.136752)
+rotates = false
+script = ExtResource("1_lk6gj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+texture_filter = 1
+rotation = 0.00821899
+scale = Vector2(7.3125, 7.3125)
+sprite_frames = SubResource("SpriteFrames_35bsc")
+autoplay = "default"

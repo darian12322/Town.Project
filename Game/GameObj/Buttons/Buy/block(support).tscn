@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://biqqhon1nftws"]
+
+[ext_resource type="Texture2D" uid="uid://2jn0b8kecuip" path="res://Game/GameObj/Buttons/Texture/Table.png" id="1_hiu3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqb1k"]
+size = Vector2(20, 19)
+
+[node name="Block(support)" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-21.5, -6)
+scale = Vector2(0.328125, 0.625)
+texture = ExtResource("1_hiu3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-22, -6)
+shape = SubResource("RectangleShape2D_eqb1k")

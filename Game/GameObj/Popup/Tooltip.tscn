@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://de2ommqjsm1wk"]
+
+[ext_resource type="Script" path="res://Game/GameObj/Popup/Script/control.gd" id="1_xgg4g"]
+
+[node name="ToolTip" type="Control"]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 386.0
+offset_top = 87.0
+offset_right = -647.0
+offset_bottom = -425.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.551734, 0.763406)
+script = ExtResource("1_xgg4g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+process_mode = 1
+offset_left = 719.0
+offset_top = 386.0
+offset_right = 861.0
+offset_bottom = 561.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 722.0
+offset_top = 390.0
+offset_right = 853.0
+offset_bottom = 554.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 15
+text = "	 Upgrade name"
+autowrap_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 13
+text = "Effect:23231dddadadad dadada dadadada"
+autowrap_mode = 2

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://caqblh5dh7178"]
+
+[ext_resource type="AudioStream" uid="uid://cqt3o14xmaxex" path="res://Game/Scene/HomeScene/audio/beam-272990.mp3" id="1_uenu7"]
+
+[node name="Blast" type="AudioStreamPlayer"]
+stream = ExtResource("1_uenu7")

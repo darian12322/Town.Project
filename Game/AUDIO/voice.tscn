@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://byd6884678qd5"]
+
+[ext_resource type="AudioStream" uid="uid://csxe4302oov3v" path="res://Game/AUDIO/cartoon-phone-voice-88637.mp3" id="1_17fe1"]
+
+[node name="Voice" type="AudioStreamPlayer"]
+stream = ExtResource("1_17fe1")

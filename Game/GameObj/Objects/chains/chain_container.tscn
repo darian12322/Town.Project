@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccugj1v88u2au"]
+
+[ext_resource type="PackedScene" uid="uid://biqqhon1nftws" path="res://Game/GameObj/Buttons/Buy/block(support).tscn" id="1_jp3ku"]
+[ext_resource type="PackedScene" uid="uid://bkmf345wvwlrr" path="res://Game/GameObj/Buttons/Buy/chains.tscn" id="2_4nd37"]
+[ext_resource type="PackedScene" uid="uid://w33uduvs2hve" path="res://Game/GameObj/Buttons/Buy/final_button.tscn" id="3_p04pc"]
+
+[node name="ChainContainer" type="Node2D"]
+position = Vector2(496, -78)
+rotation = -1.54136
+
+[node name="Block(support)" parent="." instance=ExtResource("1_jp3ku")]
+position = Vector2(138.704, -178.017)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(116.704, -175.017)
+node_a = NodePath("../Block(support)")
+node_b = NodePath("../Chains")
+
+[node name="Chains" parent="." instance=ExtResource("2_4nd37")]
+position = Vector2(112.704, -169.017)
+collision_mask = 0
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(116.704, -141.017)
+node_a = NodePath("../Chains")
+node_b = NodePath("../Chains2")
+
+[node name="Chains2" parent="." instance=ExtResource("2_4nd37")]
+position = Vector2(112.704, -136.017)
+collision_mask = 0
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(116.704, -107.017)
+node_a = NodePath("../Chains2")
+node_b = NodePath("../Chains3")
+
+[node name="Chains3" parent="." instance=ExtResource("2_4nd37")]
+position = Vector2(112.704, -103.017)
+collision_mask = 0
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2(116.208, -74.7894)
+node_a = NodePath("../Chains3")
+node_b = NodePath("../Chains4")
+
+[node name="Chains4" parent="." instance=ExtResource("2_4nd37")]
+position = Vector2(112.684, -70.1438)
+collision_mask = 0
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+position = Vector2(116.609, -41.5502)
+node_a = NodePath("../Chains4")
+node_b = NodePath("../Final_Button")
+
+[node name="Final_Button" parent="." instance=ExtResource("3_p04pc")]
+position = Vector2(95.257, -38.3742)

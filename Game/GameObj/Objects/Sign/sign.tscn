@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://qijj0w84tb0n"]
+
+[ext_resource type="Texture2D" uid="uid://bsd6y8wtcrsev" path="res://Game/GameObj/Objects/Texture/sign.png" id="1_uq8uh"]
+[ext_resource type="Script" path="res://Game/GameObj/Objects/Sign/sign.gd" id="1_wdf8c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q4lq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqgkg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3of2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8jxp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Sign" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_wdf8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-94.5, -13.5)
+scale = Vector2(0.78125, 0.78125)
+texture = ExtResource("1_uq8uh")
+
+[node name="Button" type="Button" parent="."]
+process_mode = 1
+offset_left = -102.0
+offset_top = -22.0
+offset_right = -85.0
+offset_bottom = -1.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_1q4lq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dqgkg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u3of2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w8jxp")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

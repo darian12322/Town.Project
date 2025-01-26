@@ -1,0 +1,164 @@
+[gd_scene load_steps=19 format=3 uid="uid://76i3iamsgfmt"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_4qe8i"]
+[ext_resource type="Texture2D" uid="uid://du8j3net5ksxm" path="res://Game/Scene/HomeScene/Texture/Sky.png" id="1_b08ac"]
+[ext_resource type="Texture2D" uid="uid://c60wrwu2s7ks2" path="res://Game/Scene/HomeScene/Texture/Grass(3parts).png" id="1_qhvjl"]
+[ext_resource type="Script" path="res://Game/Handlers/handlers.gd" id="2_ckuae"]
+[ext_resource type="Texture2D" uid="uid://bi3e8silhjkyn" path="res://Game/Scene/HomeScene/Texture/Dirt(3Parts).png" id="2_sckg2"]
+[ext_resource type="PackedScene" uid="uid://dktlhtxrdc2eq" path="res://Game/GameObj/Buttons/Buy/button_buy.tscn" id="5_0li1k"]
+[ext_resource type="PackedScene" uid="uid://qijj0w84tb0n" path="res://Game/GameObj/Objects/Sign/sign.tscn" id="6_h4usm"]
+[ext_resource type="Texture2D" uid="uid://c107bv863fqbp" path="res://Game/GameObj/Objects/Texture/Coin.png" id="6_lyjxa"]
+[ext_resource type="PackedScene" uid="uid://c4yuryv6atp5d" path="res://Game/GameObj/Objects/red_crystal.tscn" id="9_2qti7"]
+[ext_resource type="Texture2D" uid="uid://cfv4gldvuvukg" path="res://Game/GameObj/Objects/Texture/Green_Crystal-sheet.png" id="10_voxqk"]
+[ext_resource type="PackedScene" uid="uid://b4srbe1npu4jr" path="res://Game/GameObj/Objects/cliuds/clouds_layer.tscn" id="11_oaivk"]
+[ext_resource type="PackedScene" uid="uid://jdti5tuopw4r" path="res://Game/Scene/HomeScene/audio/audio_stream_player.tscn" id="12_rourt"]
+[ext_resource type="PackedScene" uid="uid://ck6ssnkw0kdwq" path="res://Game/Scene/Pause/canvas_layer.tscn" id="13_ua4qn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jcbl6"]
+texture = ExtResource("1_qhvjl")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f432d"]
+texture = ExtResource("2_sckg2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3qfhl"]
+sources/1 = SubResource("TileSetAtlasSource_jcbl6")
+sources/2 = SubResource("TileSetAtlasSource_f432d")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtdy0"]
+size = Vector2(10, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3e77"]
+size = Vector2(11, 20)
+
+[node name="Game" type="Node"]
+script = ExtResource("1_4qe8i")
+
+[node name="Handlers" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 4
+script = ExtResource("2_ckuae")
+
+[node name="GameInterface" type="Node" parent="."]
+
+[node name="Map" type="Node2D" parent="GameInterface"]
+
+[node name="TextureRect" type="TextureRect" parent="GameInterface/Map"]
+z_index = -1
+offset_left = 8.0
+offset_top = -220.0
+offset_right = 709.0
+offset_bottom = 182.0
+texture = ExtResource("1_b08ac")
+
+[node name="TileMap" type="TileMap" parent="GameInterface/Map"]
+texture_filter = 1
+tile_set = SubResource("TileSet_3qfhl")
+format = 2
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(720912, 1, 0, 720913, 65537, 0, 720914, 131073, 0, 720909, 1, 0, 720910, 65537, 0, 720911, 131073, 0, 720915, 1, 0, 720916, 65537, 0, 720917, 131073, 0, 720918, 1, 0, 720919, 65537, 0, 720920, 131073, 0, 720921, 1, 0, 720922, 65537, 0, 720923, 131073, 0, 720906, 1, 0, 720907, 65537, 0, 720908, 131073, 0, 720903, 1, 0, 720904, 65537, 0, 720905, 131073, 0, 720900, 1, 0, 720901, 65537, 0, 720902, 131073, 0, 720924, 1, 0, 720925, 65537, 0, 720926, 131073, 0, 720927, 1, 0, 720928, 65537, 0, 720929, 131073, 0, 720930, 1, 0, 720931, 65537, 0, 720932, 131073, 0, 720933, 1, 0, 720934, 65537, 0, 720935, 131073, 0, 786445, 131074, 0, 786446, 2, 0, 786447, 65538, 0, 786443, 2, 0, 786444, 65538, 0, 786440, 2, 0, 786441, 65538, 0, 786442, 131074, 0, 786437, 2, 0, 786438, 65538, 0, 786439, 131074, 0, 786434, 2, 0, 786435, 65538, 0, 786436, 131074, 0, 786448, 131074, 0, 786449, 2, 0, 786450, 65538, 0, 786451, 131074, 0, 786452, 2, 0, 786453, 65538, 0, 786454, 131074, 0, 786455, 2, 0, 786456, 65538, 0, 786457, 131074, 0, 786458, 2, 0, 786459, 65538, 0, 786460, 131074, 0, 786461, 2, 0, 786462, 65538, 0, 786463, 131074, 0, 786464, 2, 0, 786465, 65538, 0, 786466, 131074, 0, 786467, 2, 0, 786468, 65538, 0, 786469, 131074, 0, 786470, 2, 0, 786471, 65538, 0, 786472, 131074, 0, 720897, 1, 0, 720898, 65537, 0, 720899, 131073, 0, 720936, 1, 0, 720937, 65537, 0, 720938, 131073, 0)
+
+[node name="Houses" type="Node2D" parent="GameInterface"]
+
+[node name="Obj_Main_Map" type="Node2D" parent="GameInterface"]
+
+[node name="Sign" parent="GameInterface/Obj_Main_Map" instance=ExtResource("6_h4usm")]
+position = Vector2(611, 180)
+
+[node name="Area2D" type="Area2D" parent="GameInterface/Obj_Main_Map"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameInterface/Obj_Main_Map/Area2D"]
+position = Vector2(547, 165)
+shape = SubResource("RectangleShape2D_gtdy0")
+
+[node name="Area2D2" type="Area2D" parent="GameInterface/Obj_Main_Map"]
+
+[node name="End" type="CollisionShape2D" parent="GameInterface/Obj_Main_Map/Area2D2"]
+position = Vector2(788, 166)
+shape = SubResource("RectangleShape2D_k3e77")
+
+[node name="GameUI" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameUI"]
+
+[node name="ButtonBuy" parent="GameUI/CanvasLayer" instance=ExtResource("5_0li1k")]
+z_index = 1
+position = Vector2(1085, 596)
+
+[node name="Camera2D" type="Camera2D" parent="GameUI/CanvasLayer"]
+position = Vector2(342, 44)
+zoom = Vector2(2, 2)
+
+[node name="Coin" type="Sprite2D" parent="GameUI/CanvasLayer"]
+texture_filter = 1
+position = Vector2(31, 34)
+scale = Vector2(2.1875, 2.03125)
+texture = ExtResource("6_lyjxa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/CanvasLayer"]
+offset_left = 51.0
+offset_top = 22.0
+offset_right = 123.0
+offset_bottom = 72.0
+
+[node name="Label" type="Label" parent="GameUI/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="Label2" type="Label" parent="GameUI/CanvasLayer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "0/s"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameUI/CanvasLayer"]
+offset_left = 51.0
+offset_top = 85.0
+offset_right = 64.0
+offset_bottom = 132.0
+
+[node name="Label" type="Label" parent="GameUI/CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="Red_Crystal" parent="GameUI/CanvasLayer" instance=ExtResource("9_2qti7")]
+offset_left = 7.0
+offset_top = 82.0
+offset_right = -1111.0
+offset_bottom = -527.0
+
+[node name="Green_Crystal" type="Sprite2D" parent="GameUI/CanvasLayer"]
+texture_filter = 1
+position = Vector2(33, 164)
+scale = Vector2(3.1875, 2.95982)
+texture = ExtResource("10_voxqk")
+
+[node name="LabelGreen" type="Label" parent="GameUI/CanvasLayer"]
+offset_left = 50.0
+offset_top = 156.0
+offset_right = 60.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="CloudsLayer" parent="GameUI/CanvasLayer" instance=ExtResource("11_oaivk")]
+layer = 0
+
+[node name="WagonTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("12_rourt")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("13_ua4qn")]
+
+[connection signal="body_entered" from="GameInterface/Obj_Main_Map/Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="timeout" from="WagonTimer" to="." method="_on_wagon_timer_timeout"]

@@ -1,0 +1,738 @@
+[gd_scene load_steps=58 format=3 uid="uid://dktlhtxrdc2eq"]
+
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/button_buy.gd" id="1_bi01j"]
+[ext_resource type="Texture2D" uid="uid://co2ribtcl3n2h" path="res://Game/GameObj/Buttons/Texture/Button.png" id="1_osufx"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/button.gd" id="2_1ccb1"]
+[ext_resource type="Texture2D" uid="uid://2jn0b8kecuip" path="res://Game/GameObj/Buttons/Texture/Table.png" id="2_xbud2"]
+[ext_resource type="Texture2D" uid="uid://xtdwb6n8xiql" path="res://Game/Upgrades/Texture/Up_BuyFirstHouse.png" id="4_f8bgt"]
+[ext_resource type="Texture2D" uid="uid://c107bv863fqbp" path="res://Game/GameObj/Objects/Texture/Coin.png" id="5_1wc3x"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/buttonUP1.gd" id="5_atiad"]
+[ext_resource type="Texture2D" uid="uid://cuepyny58mm0i" path="res://Game/GameObj/Buttons/Texture/ButtonLocked.png" id="6_kxd6k"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/info.gd" id="7_pck5y"]
+[ext_resource type="Texture2D" uid="uid://cnqy4nfn3nyk1" path="res://Game/Upgrades/Texture/Up_BuySecondHouse.png" id="10_2t8rn"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/button2.gd" id="11_bpa5a"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/button_3.gd" id="12_6wnye"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/info1.gd" id="12_jr40r"]
+[ext_resource type="Texture2D" uid="uid://cs1qms28iadj3" path="res://Game/Upgrades/Texture/Up_BuyThirdHouse.png" id="12_t14ae"]
+[ext_resource type="Texture2D" uid="uid://cidajxdw55wbu" path="res://Game/Upgrades/Texture/Up_BuyFirstUp-sheet.png" id="14_dk1sp"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Upgrade/u_button_1.gd" id="15_07iie"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/info2.gd" id="15_8mh1l"]
+[ext_resource type="Texture2D" uid="uid://baure4y6k86r7" path="res://Game/Upgrades/Texture/Up_BuySecondUp-sheet.png" id="16_y1n5i"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/u_button_2.gd" id="17_aytld"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoU1.gd" id="18_eyljg"]
+[ext_resource type="Texture2D" uid="uid://7tml4iwrqabx" path="res://Game/Upgrades/Texture/Up_BuyThirdUp-sheet.png" id="18_w37sh"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/u_button_3.gd" id="19_jpn8g"]
+[ext_resource type="Texture2D" uid="uid://bncr1xkqtx8lp" path="res://Game/Upgrades/Texture/Up_BuyFirstUp2-sheet.png" id="20_v3fqq"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/u_button_4.gd" id="20_ylwwd"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoUP2.gd" id="21_ewdy1"]
+[ext_resource type="Texture2D" uid="uid://bdfypo7dkh5k7" path="res://Game/GameObj/Objects/Texture/Red_Crystal.png" id="22_041pe"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/u_button_5.gd" id="23_jmy2s"]
+[ext_resource type="Texture2D" uid="uid://cofih3s7gc0sk" path="res://Game/Upgrades/Texture/Up_BuySecondUp2-sheet-sheet.png" id="23_y1he8"]
+[ext_resource type="Texture2D" uid="uid://mhynxp85xgxb" path="res://Game/Upgrades/Texture/Up_BuyThirdUp2-sheet-sheet.png" id="24_ihg1h"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoUP3.gd" id="24_kcpk7"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/up_6.gd" id="25_6dwc3"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoUP4.gd" id="27_h8og8"]
+[ext_resource type="Texture2D" uid="uid://cfv4gldvuvukg" path="res://Game/GameObj/Objects/Texture/Green_Crystal-sheet.png" id="27_telxo"]
+[ext_resource type="Texture2D" uid="uid://cr13vl0urn4hi" path="res://Game/Upgrades/Texture/Final_MergeUp-sheet.png" id="28_2i4gp"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/up_7.gd" id="28_ytnkp"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoUP5.gd" id="31_fkaay"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoUp6.gd" id="34_6yqrc"]
+[ext_resource type="Script" path="res://Game/GameObj/Buttons/Buy/infoUP7.gd" id="38_u3xj5"]
+[ext_resource type="PackedScene" uid="uid://c5geq20dcuhhs" path="res://Game/AUDIO/purchase.tscn" id="39_pcykw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tqukk"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j04w1"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dv7pp"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bswcb"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7fwss"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="Theme" id="Theme_rh0qi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ushkx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_54q1y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3omwu"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86uvj"]
+texture = ExtResource("6_kxd6k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vlw63"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wbknf"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1uyd"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rusfg"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0go3a"]
+texture = ExtResource("1_osufx")
+
+[sub_resource type="Theme" id="Theme_fr8ta"]
+
+[sub_resource type="Theme" id="Theme_jlqqi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wrrqp"]
+
+[node name="ButtonBuy" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_bi01j")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_top = -9.0
+offset_right = 102.0
+offset_bottom = 45.0
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tqukk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_j04w1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dv7pp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bswcb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7fwss")
+text = "Shop"
+expand_icon = true
+script = ExtResource("2_1ccb1")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = -226.0
+offset_right = 271.0
+offset_bottom = 5.0
+rotation = 1.57079
+texture = ExtResource("2_xbud2")
+
+[node name="TabContainer" type="TabContainer" parent="Button/TextureRect"]
+layout_mode = 0
+offset_left = 14.9986
+offset_top = 216.0
+offset_right = 224.999
+offset_bottom = 467.0
+rotation = -1.57079
+theme = SubResource("Theme_rh0qi")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/panel = SubResource("StyleBoxFlat_ushkx")
+current_tab = 0
+
+[node name="Constructions" type="TabBar" parent="Button/TextureRect/TabContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme = SubResource("Theme_54q1y")
+theme_override_font_sizes/font_size = 3
+drag_to_rearrange_enabled = true
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Button/TextureRect/TabContainer/Constructions"]
+layout_mode = 0
+offset_left = 16.0001
+offset_top = 4.99947
+offset_right = 189.001
+offset_bottom = 208.999
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Up1" type="TextureRect" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_f8bgt")
+expand_mode = 5
+
+[node name="Button" type="Button" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1" node_paths=PackedStringArray("timer")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("5_atiad")
+timer = NodePath("../Timer")
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 52.0
+offset_right = 158.0
+offset_bottom = 75.0
+text = "5"
+
+[node name="Timer" type="Timer" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1"]
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1"]
+process_mode = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_fr8ta")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("7_pck5y")
+
+[node name="Coin" type="Sprite2D" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1"]
+texture_filter = 1
+position = Vector2(103, 63)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_1wc3x")
+
+[node name="Up2" type="TextureRect" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_2t8rn")
+expand_mode = 5
+
+[node name="Button1" type="Button" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2" node_paths=PackedStringArray("timer")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("11_bpa5a")
+timer = NodePath("../../Up1/Timer")
+
+[node name="Label1" type="Label" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 52.0
+offset_right = 158.0
+offset_bottom = 75.0
+text = "20"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("12_jr40r")
+
+[node name="Coin" type="Sprite2D" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2"]
+texture_filter = 1
+position = Vector2(103, 63)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_1wc3x")
+
+[node name="Up3" type="TextureRect" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_t14ae")
+expand_mode = 5
+
+[node name="Button2" type="Button" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3" node_paths=PackedStringArray("timer")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("12_6wnye")
+timer = NodePath("../../Up1/Timer")
+
+[node name="Label2" type="Label" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 52.0
+offset_right = 158.0
+offset_bottom = 75.0
+text = "100"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("15_8mh1l")
+
+[node name="Coin" type="Sprite2D" parent="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3"]
+texture_filter = 1
+position = Vector2(103, 63)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_1wc3x")
+
+[node name="Upgrades" type="TabBar" parent="Button/TextureRect/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="Button/TextureRect/TabContainer/Upgrades"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 189.0
+offset_bottom = 210.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Up1" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("14_dk1sp")
+expand_mode = 5
+
+[node name="UButton1" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("15_07iie")
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 52.0
+offset_right = 158.0
+offset_bottom = 75.0
+text = "50"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("18_eyljg")
+
+[node name="Coin" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1"]
+texture_filter = 1
+position = Vector2(103, 63)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_1wc3x")
+
+[node name="Up2" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("16_y1n5i")
+expand_mode = 5
+
+[node name="UButton2" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("17_aytld")
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 52.0
+offset_right = 158.0
+offset_bottom = 75.0
+text = "120"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("21_ewdy1")
+
+[node name="Coin" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2"]
+texture_filter = 1
+position = Vector2(103, 63)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_1wc3x")
+
+[node name="Up3" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("18_w37sh")
+expand_mode = 5
+
+[node name="UButton3" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("19_jpn8g")
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 52.0
+offset_right = 158.0
+offset_bottom = 75.0
+text = "500"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("24_kcpk7")
+
+[node name="Coin" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3"]
+texture_filter = 1
+position = Vector2(103, 63)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("5_1wc3x")
+
+[node name="Up4" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("20_v3fqq")
+expand_mode = 5
+
+[node name="UButton4" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("20_ylwwd")
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 49.0
+offset_right = 159.0
+offset_bottom = 72.0
+text = "  1"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("27_h8og8")
+
+[node name="Red" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4"]
+texture_filter = 1
+position = Vector2(107, 60)
+scale = Vector2(2.75, 2.78437)
+texture = ExtResource("22_041pe")
+
+[node name="Up5" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("23_y1he8")
+expand_mode = 5
+
+[node name="UButton5" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+script = ExtResource("23_jmy2s")
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 49.0
+offset_right = 159.0
+offset_bottom = 72.0
+text = "  2"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("31_fkaay")
+
+[node name="Red" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5"]
+texture_filter = 1
+position = Vector2(107, 60)
+scale = Vector2(2.75, 2.78437)
+texture = ExtResource("22_041pe")
+
+[node name="Up6" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("24_ihg1h")
+expand_mode = 5
+script = ExtResource("25_6dwc3")
+
+[node name="UButton6" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 49.0
+offset_right = 159.0
+offset_bottom = 72.0
+text = "  1"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("34_6yqrc")
+
+[node name="Red" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6"]
+texture_filter = 1
+position = Vector2(107, 60)
+scale = Vector2(2.75, 2.78437)
+texture = ExtResource("27_telxo")
+
+[node name="Up7" type="TextureRect" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("28_2i4gp")
+expand_mode = 5
+script = ExtResource("28_ytnkp")
+
+[node name="UButton7" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.9997
+offset_top = 8.99922
+offset_right = 153.0
+offset_bottom = 55.9992
+focus_mode = 0
+theme_override_constants/outline_size = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_3omwu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_86uvj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vlw63")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wbknf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a1uyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rusfg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0go3a")
+text = "Buy"
+
+[node name="Label" type="Label" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 49.0
+offset_right = 159.0
+offset_bottom = 72.0
+text = "  2"
+
+[node name="Info" type="Button" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 21.0
+focus_mode = 0
+theme = SubResource("Theme_jlqqi")
+theme_override_font_sizes/font_size = 10
+text = "?"
+script = ExtResource("38_u3xj5")
+
+[node name="Red" type="Sprite2D" parent="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7"]
+texture_filter = 1
+position = Vector2(107, 60)
+scale = Vector2(2.75, 2.78437)
+texture = ExtResource("27_telxo")
+
+[node name="Quit" type="Button" parent="Button/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.135
+anchor_right = 0.8
+anchor_bottom = 0.135
+offset_left = -203.4
+offset_top = -20.1849
+offset_right = -179.4
+offset_bottom = 10.8151
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_wrrqp")
+text = "X"
+
+[node name="Panel" type="Panel" parent="Button/TextureRect"]
+layout_mode = 0
+offset_left = 39.9999
+offset_top = 27.0001
+offset_right = 43.9999
+offset_bottom = 208.0
+
+[node name="Purchase" parent="." instance=ExtResource("39_pcykw")]
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Button" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Button" method="_on_pressed"]
+[connection signal="timeout" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Timer" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Button" method="_on_timer_timeout"]
+[connection signal="timeout" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Timer" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Button1" method="_on_timer_timeout"]
+[connection signal="timeout" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Timer" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Button2" method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Info" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Info" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up1/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Button1" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Button1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Info" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Info" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up2/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Button2" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Button2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Info" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Info" to="Button/TextureRect/TabContainer/Constructions/ScrollContainer/VBoxContainer/Up3/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1/UButton1" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1/UButton1" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up1/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2/UButton2" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2/UButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up2/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3/UButton3" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3/UButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up3/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4/UButton4" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4/UButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up4/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5/UButton5" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5/UButton5" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up5/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6/UButton6" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6" method="_on_u_button_6_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up6/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7/UButton7" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7" method="_on_u_button_7_pressed"]
+[connection signal="mouse_entered" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7/Info" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7/Info" to="Button/TextureRect/TabContainer/Upgrades/ScrollContainer2/VBoxContainer/Up7/Info" method="_on_mouse_exited"]
+[connection signal="pressed" from="Button/TextureRect/Quit" to="Button" method="_on_quit_pressed"]

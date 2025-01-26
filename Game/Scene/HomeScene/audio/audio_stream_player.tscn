@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jdti5tuopw4r"]
+
+[ext_resource type="AudioStream" uid="uid://db5i1s2738r83" path="res://Game/Scene/HomeScene/audio/jcapr-a-mystery-begins-254645.mp3" id="1_u0y1n"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_u0y1n")
+autoplay = true

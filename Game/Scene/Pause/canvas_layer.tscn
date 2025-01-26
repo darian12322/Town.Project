@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck6ssnkw0kdwq"]
+
+[ext_resource type="Script" path="res://Game/Scene/Pause/canvas_layer.gd" id="1_2qqug"]
+[ext_resource type="Texture2D" uid="uid://co2ribtcl3n2h" path="res://Game/GameObj/Buttons/Texture/Button.png" id="1_e15xb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34h6m"]
+texture = ExtResource("1_e15xb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_062yg"]
+texture = ExtResource("1_e15xb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o5mb"]
+texture = ExtResource("1_e15xb")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_2qqug")
+
+[node name="Resume" type="Button" parent="."]
+texture_filter = 1
+offset_left = 481.0
+offset_top = 288.0
+offset_right = 711.0
+offset_bottom = 369.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_34h6m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_062yg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0o5mb")
+text = "RESUME"
+
+[node name="MaineMenu" type="Button" parent="."]
+texture_filter = 1
+offset_left = 482.0
+offset_top = 372.0
+offset_right = 712.0
+offset_bottom = 453.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_34h6m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_062yg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0o5mb")
+text = "QUIT"
+
+[node name="X" type="Button" parent="."]
+offset_left = 678.0
+offset_top = 266.0
+offset_right = 727.0
+offset_bottom = 297.0
+text = "X"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MaineMenu" to="." method="_on_maine_menu_pressed"]
+[connection signal="pressed" from="X" to="." method="_on_x_pressed"]

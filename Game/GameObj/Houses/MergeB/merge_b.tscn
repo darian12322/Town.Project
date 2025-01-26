@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://db6qt7knse47m"]
+
+[ext_resource type="Texture2D" uid="uid://dexalbcqx7usd" path="res://Game/GameObj/Houses/Texture/Final_Merge.png" id="1_q6da4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl2hu"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(0, 0, 160, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfulb"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(160, 0, 160, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trnep"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(320, 0, 160, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqixu"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(480, 0, 160, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv82u"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(640, 0, 160, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jct64"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(800, 0, 160, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otr1g"]
+atlas = ExtResource("1_q6da4")
+region = Rect2(960, 0, 160, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_575nh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl2hu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfulb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trnep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqixu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv82u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jct64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otr1g")
+}],
+"loop": false,
+"name": &"1",
+"speed": 10.0
+}]
+
+[node name="MergeB" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(122.25, -71.625)
+scale = Vector2(2.23437, 2.23437)
+sprite_frames = SubResource("SpriteFrames_575nh")
+animation = &"1"
+autoplay = "1"

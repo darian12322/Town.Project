@@ -1,0 +1,130 @@
+[gd_scene load_steps=14 format=3 uid="uid://dqm6s8ucrknnn"]
+
+[ext_resource type="Texture2D" uid="uid://dwq6eaxdd8tn5" path="res://Game/GameObj/Wagon_Table/texture/Wagon-Table.png" id="1_8m0yn"]
+[ext_resource type="Script" path="res://Game/GameObj/Wagon_Table/script/wagon_menu.gd" id="1_iyq4d"]
+[ext_resource type="Texture2D" uid="uid://batua073shi5x" path="res://Game/GameObj/Wagon_Table/texture/Crystal_Buy(red)-sheet.png" id="3_8cpls"]
+[ext_resource type="Texture2D" uid="uid://cuepyny58mm0i" path="res://Game/GameObj/Buttons/Texture/ButtonLocked.png" id="4_1wnj2"]
+[ext_resource type="Script" path="res://Game/GameObj/Wagon_Table/script/rich_label.gd" id="4_5p6ro"]
+[ext_resource type="Texture2D" uid="uid://co2ribtcl3n2h" path="res://Game/GameObj/Buttons/Texture/Button.png" id="4_oibe2"]
+[ext_resource type="Texture2D" uid="uid://bi3kwv1mw2vp0" path="res://Game/GameObj/Wagon_Table/texture/Crystal_Buy(Green)-sheet.png" id="7_hci3o"]
+[ext_resource type="Script" path="res://Game/GameObj/Wagon_Table/rich_label_2.gd" id="8_54s1f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84ap5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2c5tn"]
+texture = ExtResource("4_1wnj2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8bi1"]
+texture = ExtResource("4_oibe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yeacn"]
+texture = ExtResource("4_oibe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rpc36"]
+texture = ExtResource("4_oibe2")
+
+[node name="Wagon-Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iyq4d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 136.0
+offset_top = 141.0
+offset_right = 682.0
+offset_bottom = 437.0
+texture = ExtResource("1_8m0yn")
+
+[node name="Quit" type="Button" parent="TextureRect"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.135
+anchor_right = 0.8
+anchor_bottom = 0.135
+offset_left = 44.2
+offset_top = -8.96
+offset_right = 85.2
+offset_bottom = 26.04
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_84ap5")
+text = "X"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 42.0
+offset_right = 417.0
+offset_bottom = 255.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_8cpls")
+
+[node name="Button" type="Button" parent="TextureRect/HBoxContainer/TextureRect"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 223.0
+offset_top = 24.0
+offset_right = 350.0
+offset_bottom = 80.0
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2c5tn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e8bi1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yeacn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rpc36")
+text = "Buy"
+
+[node name="RichLabel" type="RichTextLabel" parent="TextureRect/HBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 18.0
+offset_right = 236.0
+offset_bottom = 86.0
+bbcode_enabled = true
+script = ExtResource("4_5p6ro")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_hci3o")
+
+[node name="Button2" type="Button" parent="TextureRect/HBoxContainer/TextureRect2"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 224.0
+offset_top = 27.0
+offset_right = 351.0
+offset_bottom = 83.0
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2c5tn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e8bi1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yeacn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rpc36")
+text = "Buy"
+
+[node name="RichLabel2" type="RichTextLabel" parent="TextureRect/HBoxContainer/TextureRect2"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 22.0
+offset_right = 237.0
+offset_bottom = 90.0
+bbcode_enabled = true
+script = ExtResource("8_54s1f")
+
+[connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureRect/HBoxContainer/TextureRect2/Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drybg1gqja0uy"]
+
+[ext_resource type="AudioStream" uid="uid://gk840sskek35" path="res://Game/Scene/HomeScene/audio/emp-blast2-106415.mp3" id="1_jlw8h"]
+
+[node name="Explosion" type="AudioStreamPlayer"]
+stream = ExtResource("1_jlw8h")

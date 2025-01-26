@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxcbhku11emuy"]
+
+[ext_resource type="Script" path="res://Game/GameObj/Textbox/script/text_box_finished.gd" id="1_hhimu"]
+[ext_resource type="Texture2D" uid="uid://dhp3aypp5hdo6" path="res://Game/GameObj/Textbox/texture/Text_box.png" id="1_jru47"]
+[ext_resource type="Texture2D" uid="uid://l7ct71ch7tik" path="res://Game/GameObj/Textbox/texture/Wagon_PP.png" id="2_eqtnc"]
+
+[sub_resource type="FontVariation" id="FontVariation_gamfp"]
+
+[node name="Text_Box_Finished" type="CanvasLayer"]
+script = ExtResource("1_hhimu")
+
+[node name="text_box" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 134.0
+offset_top = -167.0
+offset_right = -78.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_jru47")
+
+[node name="MarginContainer" type="MarginContainer" parent="text_box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0489362
+anchor_top = 0.179104
+anchor_right = 0.95
+anchor_bottom = 0.865672
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="text_box/MarginContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "dadada"
+autowrap_mode = 2
+
+[node name="End" type="Label" parent="text_box/MarginContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("FontVariation_gamfp")
+text = "CLICK
+"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.04
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 19.0
+offset_top = 485.0
+offset_right = 157.0
+offset_bottom = 611.0
+texture = ExtResource("2_eqtnc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

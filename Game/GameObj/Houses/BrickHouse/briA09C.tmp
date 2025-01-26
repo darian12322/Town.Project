@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://b7tjvl4vp061q"]
+
+[ext_resource type="Texture2D" uid="uid://3nn8ae0oa6nc" path="res://Game/GameObj/Houses/Texture/House(Brick)(Appear-sheet.png" id="1_76sys"]
+[ext_resource type="Texture2D" uid="uid://chrvm8dup3prw" path="res://Game/GameObj/Houses/Texture/House(BrickV2)AppearAn.png" id="2_olbdn"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="3_1inu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_218b6"]
+atlas = ExtResource("1_76sys")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br3sy"]
+atlas = ExtResource("1_76sys")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbrix"]
+atlas = ExtResource("1_76sys")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x228r"]
+atlas = ExtResource("1_76sys")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80on5"]
+atlas = ExtResource("1_76sys")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0igx2"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpxvg"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nog10"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ton5u"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbfsf"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpp8i"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll8am"]
+atlas = ExtResource("2_olbdn")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgn8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_218b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br3sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbrix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x228r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80on5")
+}],
+"loop": false,
+"name": &"1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0igx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpxvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nog10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ton5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbfsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpp8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll8am")
+}],
+"loop": false,
+"name": &"2",
+"speed": 10.0
+}]
+
+[node name="Brick_House" type="Node2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(18, 16.1935)
+scale = Vector2(2.125, 2.03361)
+sprite_frames = SubResource("SpriteFrames_dgn8c")
+animation = &"2"
+autoplay = "1"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("3_1inu6")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjcuml7spa0ne"]
+
+[ext_resource type="AudioStream" uid="uid://bin2vobhjgjb5" path="res://Game/Scene/MainMenu/audio/menu-music-251877.mp3" id="1_rv7cl"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_rv7cl")
